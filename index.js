@@ -24,7 +24,7 @@ require("./services/passport");
 require("./routes/authRoutes")(app);
 require("./routes/billingRoutes")(app);
 
-if (process.env.NODE_ENV == 'production') then {
+if (process.env.NODE_ENV == 'production') { 
 	//express will serve up production assets like main.js or main.css file
 	app.use(express.static('client/build'));
 	//express will serve up the index.html file if it does not recognize the route
