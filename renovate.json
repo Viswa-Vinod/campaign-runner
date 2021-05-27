@@ -1,44 +1,46 @@
 {
-  "timezone": "Asia/Kolkata",
-  "schedule": [
-    "before 3am on Monday"
-  ],
-  "prHourlyLimit": 2,
-  "prCreation": "not-pending",
-  "baseBranches": ["develop"],
-  "node": {
-    "supportPolicy": ["lts_latest"]
-  },
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true
+    "timezone": "Asia/Kolkata",
+    "schedule": [
+      "before 3am on Monday"
+    ],
+    "prHourlyLimit": 2,
+    "prCreation": "not-pending",
+    "baseBranches": ["develop"],
+    "node": {
+      "supportPolicy": ["lts_latest"]
     },
-    {
-      "matchUpdateTypes": ["minor", "major"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": false
-    },
-    {
-      "matchPackageNames": [
-      "react",
-      "node", 
-      "@types/node",
-      "react-scripts",
-      "webpack",
-      ],
-      "commitMessageAction": "[INFO_ONLY_DO_NOT_MERGE]",
-      "automerge": false
-    },
-    {
-      "matchPackagePatterns": [
-        "@types/react",
-        "storybook",
-        "babel",
-        "node"
-      ],
-      "commitMessageAction": "[INFO_ONLY_DO_NOT_MERGE]",
-      "automerge": false
-    }
+    "packageRules": [
+      {
+        "matchUpdateTypes": ["patch"],
+        "matchCurrentVersion": "!/^0/",
+        "automerge": true
+      },
+      {
+        "matchUpdateTypes": ["minor", "major"],
+        "matchCurrentVersion": "!/^0/",
+        "automerge": false
+      },
+      {
+        "matchPackageNames": [
+        "react",
+        "node", 
+        "@types/node",
+        "react-scripts",
+        "webpack"
+        ],
+        "commitMessageAction": "[INFO_ONLY_DO_NOT_MERGE]",
+        "automerge": false
+      },
+      {
+        "matchPackagePatterns": [
+          "@types/react",
+          "storybook",
+          "babel",
+          "node"
+        ],
+        "commitMessageAction": "[INFO_ONLY_DO_NOT_MERGE]",
+        "automerge": false
+      }
+    ]
 }
+  
