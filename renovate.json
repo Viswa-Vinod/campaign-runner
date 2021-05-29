@@ -5,7 +5,7 @@
     ],
     "prHourlyLimit": 2,
     "prCreation": "not-pending",
-    "baseBranches": ["develop"],
+    "baseBranches": ["master"],
     "node": {
       "supportPolicy": ["lts_latest"]
     },
